@@ -23,3 +23,4 @@ screening.
 ## Team Notes
 <!-- add your own line below, one per teammate -->
 
+- Fernand - I would adjust this step to improve traceability.
