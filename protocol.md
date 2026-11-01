@@ -23,5 +23,4 @@ screening.
 ## Team Notes
 <!-- add your own line below, one per teammate -->
 
-- Fernand - I would adjust this step to improve traceability.
-- Mariedamien - Which step do you want to improve exactly?
+-Mariedamien - Make sure everyone is at the same required level of understanding of the screening protocol.
