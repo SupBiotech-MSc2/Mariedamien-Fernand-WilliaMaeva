@@ -17,9 +17,10 @@ screening.
 ## Steps
 1. Design and order sgRNA targeting exon 2 of the gene of interest.
 2. Complex Cas9 protein with sgRNA at a 1:1.2 molar ratio, incubate 10 min RT.
-3. Electroporate RNP complex into 2x10^5 cells per reaction.
+3. Electroporate RNP complex into 2x10^5 cells per reaction.(count cells first)
 4. Recover cells in antibiotic-free media for 48h.
 5. Validate editing efficiency by amplicon sequencing.
+
 
 ## Team Notes
 <!-- add your own line below, one per teammate -->
