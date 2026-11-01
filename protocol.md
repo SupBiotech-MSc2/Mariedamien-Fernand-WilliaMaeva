@@ -22,4 +22,4 @@ screening.
 
 ## Team Notes
 <!-- add your own line below, one per teammate -->
-
+- WilliaMaeva - I would add a viability check after step 4.
