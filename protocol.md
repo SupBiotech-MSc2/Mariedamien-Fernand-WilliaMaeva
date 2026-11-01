@@ -23,3 +23,4 @@ screening.
 ## Team Notes
 <!-- add your own line below, one per teammate -->
 - WilliaMaeva - I would add a viability check after step 4.
+-Mariedamien - Make sure everyone is at the same required level of understanding of the screening protocol.
