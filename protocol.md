@@ -26,3 +26,4 @@ screening.
 - Mariedamien - Which step do you want to improve exactly?
 - Fernand - I would adjust this step to improve traceability.
 - Fernand - Testing my personal feature branch.
+- Fernand - Practising Git rebase on my feature branch.
