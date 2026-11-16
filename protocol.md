@@ -26,5 +26,8 @@ screening.
 <!-- add your own line below, one per teammate -->
 - WilliaMaeva - I would add a viability check after step 4.
 - Fernand - I would adjust this step to improve traceability.
--Mariedamien - Make sure everyone is at the same required level of understanding of the screening protocol.
-Make further controls after step 5
+- Mariedamien - Make sure everyone is at the same required level of understanding of the screening protocol.
+- Make further controls after step 5.
+- Mariedamien - Which step do you want to improve exactly?
+- Fernand - Testing my personal feature branch.
+- Fernand - Practising Git rebase on my feature branch.
