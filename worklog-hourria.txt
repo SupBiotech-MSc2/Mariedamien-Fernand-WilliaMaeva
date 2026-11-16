@@ -1,0 +1,376 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-hourria.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git clone https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git
+$ git log --oneline
+3f6a76d Initial commit
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-hourria.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git add protocol.md
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   protocol.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-hourria.txt
+
+$ git commit -m "feat: add team note from williamaeva"
+[main ff35bdf] feat: add team note from williamaeva
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git pull origin main
+$ git config --global pull.rebase false
+$ git pull origin main
+Auto-merging protocol.md
+CONFLICT (content): Merge conflict in protocol.md
+Automatic merge failed; fix conflicts and then commit the result.
+$ git add protocol.md
+$ git commit
+$ git add protocol.md
+$ git commit   (merge: conflict resolved, kept both team notes)
+$ git push origin main
+To https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git
+   1cd2018..5eb1ada  main -> main
+$ git log --oneline --graph
+*   5eb1ada Merge branch 'main' of https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+|\  
+| *   1cd2018 fix: fixed merge conflict from Mariedamien
+| |\  
+| | * 2a8d407 feat: restore Fernand team note
+| | * a029623 Revert "feat: add team note from Fernand"
+| * | a4563c8 feat: Cheking from Mariedamien
+| |/  
+| * 1c411d3 feat: trying to underdtand the change request of Fernand from Mariedamien
+| * 0df6a3b feat: add team note from Fernand
+* | ff35bdf feat: add team note from williamaeva
+|/  
+* 3f6a76d Initial commit
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-hourria.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git restore protocol.md
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-hourria.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git add protocol.md
+$ git commit -m "test: throwaway commit"
+[main 63727e8] test: throwaway commit
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+$ git log --oneline
+63727e8 test: throwaway commit
+5eb1ada Merge branch 'main' of https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ff35bdf feat: add team note from williamaeva
+1cd2018 fix: fixed merge conflict from Mariedamien
+a4563c8 feat: Cheking from Mariedamien
+2a8d407 feat: restore Fernand team note
+a029623 Revert "feat: add team note from Fernand"
+1c411d3 feat: trying to underdtand the change request of Fernand from Mariedamien
+0df6a3b feat: add team note from Fernand
+3f6a76d Initial commit
+$ git reset HEAD~1
+Unstaged changes after reset:
+M	protocol.md
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   protocol.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-hourria.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+$ git restore protocol.md
+$ git pull origin main
+From https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+$ git revert ff35bdf
+$ git add protocol.md
+$ git revert --continue
+$ git push origin main
+To https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git
+   5eb1ada..3402625  main -> main
+$ git log --oneline -4
+3402625 Revert "feat: add team note from williamaeva"
+5eb1ada Merge branch 'main' of https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ff35bdf feat: add team note from williamaeva
+1cd2018 fix: fixed merge conflict from Mariedamien
+$ git add protocol.md
+$ git commit -m "feat: restore team note from williamaeva"
+[main 10cb29f] feat: restore team note from williamaeva
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+$ git push origin main
+To https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git
+   3402625..10cb29f  main -> main
+$ git log -3
+commit 10cb29fbfb05fb1e195879acf2077e281fe836a0
+Author: Willia-Maeva NTSAME ANDA <na.williamaeva@gmail.com>
+Date:   Sun Nov 1 15:39:07 2026 +0100
+
+    feat: restore team note from williamaeva
+
+commit 34026255900e4003ce40a47d85683cded6d4a7d9
+Author: Willia-Maeva NTSAME ANDA <na.williamaeva@gmail.com>
+Date:   Sun Nov 1 15:30:32 2026 +0100
+
+    Revert "feat: add team note from williamaeva"
+    
+    This reverts commit ff35bdf1b0551a829286c3943b8e3154b82a1d7e.
+
+commit 5eb1ada39bb0ef33d3e878d3816e1bcefaacac90
+Merge: ff35bdf 1cd2018
+Author: Willia-Maeva NTSAME ANDA <na.williamaeva@gmail.com>
+Date:   Sun Nov 1 15:02:44 2026 +0100
+
+    Merge branch 'main' of https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+$ git log --oneline
+10cb29f feat: restore team note from williamaeva
+3402625 Revert "feat: add team note from williamaeva"
+5eb1ada Merge branch 'main' of https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ff35bdf feat: add team note from williamaeva
+1cd2018 fix: fixed merge conflict from Mariedamien
+a4563c8 feat: Cheking from Mariedamien
+2a8d407 feat: restore Fernand team note
+a029623 Revert "feat: add team note from Fernand"
+1c411d3 feat: trying to underdtand the change request of Fernand from Mariedamien
+0df6a3b feat: add team note from Fernand
+3f6a76d Initial commit
+$ git show ff35bdf
+commit ff35bdf1b0551a829286c3943b8e3154b82a1d7e
+Author: Willia-Maeva NTSAME ANDA <na.williamaeva@gmail.com>
+Date:   Sun Nov 1 14:43:48 2026 +0100
+
+    feat: add team note from williamaeva
+
+diff --git a/protocol.md b/protocol.md
+index f083b29..0b34ca0 100644
+--- a/protocol.md
++++ b/protocol.md
+@@ -22,4 +22,4 @@ screening.
+ 
+ ## Team Notes
+ <!-- add your own line below, one per teammate -->
+-
++- WilliaMaeva - I would add a viability check after step 4.
+$ git checkout -b feature/williamaeva-idea
+Switched to a new branch 'feature/williamaeva-idea'
+$ git branch
+* feature/williamaeva-idea
+  main
+$ git add protocol.md
+$ git commit -m "feat: add trypan blue to reagents"
+[feature/williamaeva-idea 7f0e794] feat: add trypan blue to reagents
+ 1 file changed, 1 insertion(+)
+$ git push origin feature/williamaeva-idea
+remote: 
+remote: Create a pull request for 'feature/williamaeva-idea' on GitHub by visiting:        
+remote:      https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva/pull/new/feature/williamaeva-idea        
+remote: 
+To https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git
+ * [new branch]      feature/williamaeva-idea -> feature/williamaeva-idea
+$ git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+$ git switch feature/williamaeva-idea
+Switched to branch 'feature/williamaeva-idea'
+$ git log --oneline main
+$ git log --oneline feature/williamaeva-idea
+$ git rebase main   -> Current branch feature/williamaeva-idea is up to date.
+$ git rebase feature/williamaeva-idea   -> Current branch feature/williamaeva-idea is up to date.
+$ git add protocol.md
+$ git commit -m "feat: add cell count reminder to step 3"
+[feature/williamaeva-idea b15bfe2] feat: add cell count reminder to step 3
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+$ git rebase main
+Current branch feature/williamaeva-idea is up to date.
+$ git log --oneline --graph -4
+* b15bfe2 feat: add cell count reminder to step 3
+* 7f0e794 feat: add trypan blue to reagents
+* 10cb29f feat: restore team note from williamaeva
+* 3402625 Revert "feat: add team note from williamaeva"
+$ git status
+On branch feature/williamaeva-idea
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-hourria.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git fetch origin
+From https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ * [new branch]      feature/Mariedamie-idea -> origin/feature/Mariedamie-idea
+ * [new branch]      feature/fernand-idea    -> origin/feature/fernand-idea
+   10cb29f..d69f709  main                    -> origin/main
+$ git log --oneline --graph --all -12
+* d69f709 chore: bump status to draft v2
+* 0454fb5 feat: level 6 branch from Mariedamien
+* 5060203 Revert "feat: add team note from williamaeva"
+* e3a4d1c feat: revert from Mariedamien
+| * b15bfe2 feat: add cell count reminder to step 3
+| * 7f0e794 feat: add trypan blue to reagents
+|/  
+* 10cb29f feat: restore team note from williamaeva
+* 3402625 Revert "feat: add team note from williamaeva"
+*   5eb1ada Merge branch 'main' of https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+|\  
+| *   1cd2018 fix: fixed merge conflict from Mariedamien
+| |\  
+| * | a4563c8 feat: Cheking from Mariedamien
+* | | ff35bdf feat: add team note from williamaeva
+$ git fetch origin
+$ git log --oneline --graph --all -10
+* d69f709 chore: bump status to draft v2
+* 0454fb5 feat: level 6 branch from Mariedamien
+* 5060203 Revert "feat: add team note from williamaeva"
+* e3a4d1c feat: revert from Mariedamien
+| * b15bfe2 feat: add cell count reminder to step 3
+| * 7f0e794 feat: add trypan blue to reagents
+|/  
+* 10cb29f feat: restore team note from williamaeva
+* 3402625 Revert "feat: add team note from williamaeva"
+*   5eb1ada Merge branch 'main' of https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+|\  
+| *   1cd2018 fix: fixed merge conflict from Mariedamien
+| |\  
+$ git fetch origin
+From https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+   d69f709..59f003c  main       -> origin/main
+$ git log --oneline --graph --all -10
+*   59f003c Merge branch 'feature/status-review'
+|\  
+| * 63ac023 chore: mark status as under review
+* | d69f709 chore: bump status to draft v2
+|/  
+* 0454fb5 feat: level 6 branch from Mariedamien
+* 5060203 Revert "feat: add team note from williamaeva"
+* e3a4d1c feat: revert from Mariedamien
+| * b15bfe2 feat: add cell count reminder to step 3
+| * 7f0e794 feat: add trypan blue to reagents
+|/  
+* 10cb29f feat: restore team note from williamaeva
+* 3402625 Revert "feat: add team note from williamaeva"
+$ git switch main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 6 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+$ git pull origin main
+From https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ * branch            main       -> FETCH_HEAD
+Updating 10cb29f..59f003c
+Fast-forward
+ protocol.md | 14 ++++++++++++--
+ 1 file changed, 12 insertions(+), 2 deletions(-)
+$ git log --oneline -3
+59f003c Merge branch 'feature/status-review'
+63ac023 chore: mark status as under review
+d69f709 chore: bump status to draft v2
+$ grep -n "<<<<<<<\|=======\|>>>>>>>" protocol.md
+$ tail -n +20 protocol.md
+$ grep -n "<<<<<<<\|=======\|>>>>>>>" protocol.md
+$ git pull origin main
+From https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+$ git push origin main
+Everything up-to-date
+$ git add protocol.md
+$ git commit -m "fix: remove leftover conflict markers in team notes"
+[main 4586acf] fix: remove leftover conflict markers in team notes
+ 1 file changed, 9 deletions(-)
+$ git pull origin main
+From https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+$ git push origin main
+To https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git
+   59f003c..4586acf  main -> main
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	worklog-hourria.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+$ git merge feature/williamaeva-idea
+Auto-merging protocol.md
+Merge made by the 'ort' strategy.
+ protocol.md | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+$ grep -n "<<<<<<<\|=======\|>>>>>>>" protocol.md
+$ git log --oneline --graph -6
+*   a6610ea Merge branch 'feature/williamaeva-idea'
+|\  
+| * b15bfe2 feat: add cell count reminder to step 3
+| * 7f0e794 feat: add trypan blue to reagents
+* | 4586acf fix: remove leftover conflict markers in team notes
+* |   59f003c Merge branch 'feature/status-review'
+|\ \  
+| * | 63ac023 chore: mark status as under review
+$ git push origin main
+To https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+$ git pull origin main
+From https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva
+ * branch            main       -> FETCH_HEAD
+   4586acf..1b699a5  main       -> origin/main
+Auto-merging protocol.md
+Merge made by the 'ort' strategy.
+ protocol.md | 1 +
+ 1 file changed, 1 insertion(+)
+$ grep -n "<<<<<<<\|=======\|>>>>>>>" protocol.md
+$ git push origin main
+To https://github.com/SupBiotech-MSc2/Mariedamien-Fernand-WilliaMaeva.git
+   1b699a5..ac3edf7  main -> main
+$ git add worklog-hourria.txt
+$ git commit -m "chore: add worklog-hourria"
+$ git push origin main
